@@ -41,6 +41,7 @@ body{
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem 12%;
+    
 }
 
 .header .logo{
@@ -53,6 +54,13 @@ body{
     color: #3acd58;
 }
 
+.header .logo img {
+    width: 360px;  /* Adjust the size */
+    height: auto;
+    margin-left: 5px; /* Space between text and logo */
+}
+
+.header .logo .srmlogo
 .navbar {
     display: flex;
     background-color: #333;
@@ -74,6 +82,53 @@ body{
     color: black;
     cursor: pointer;
     display: none;
+}
+
+.content {
+    max-width: 600px; /* Adjust width as needed */
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2), 
+                -5px -5px 15px rgba(255, 255, 255, 0.6); /* Depth effect */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.content:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3), 
+                -8px -8px 20px rgba(255, 255, 255, 0.5);
+}
+
+.content h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.content span {
+    font-weight: bold;
+    
+}
+
+.content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.content .btn:hover {
+    background: linear-gradient(135deg, #0056b3, #004094);
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -297,3 +352,28 @@ img {
   .footer .credit span {
     color: var(--theme-color);
   }
+
+  .qr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Adjust based on layout */
+    padding: 20px;
+}
+
+.qr-img {
+    width: 200px; /* Set a square dimension */
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures no overflow */
+    border: 2px solid #000; /* Optional: Border for better visibility */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+.qr-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the square without distortion */
+}
