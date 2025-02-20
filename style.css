@@ -40,11 +40,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem 9%;
+    padding: 0.5rem 12%;
 }
 
 .header .logo{
-    color: black;
+    color: white;
     font-weight: bolder;
     font-size: 2.5rem;
 }
@@ -55,7 +55,7 @@ body{
 
 .header .navbar a{
     font-size: 1.7rem;
-    color: black;
+    color: white;
     margin-left: 2rem;
 }
 
@@ -92,7 +92,7 @@ body{
     display: inline-block;
     padding: 0.8rem 3rem;
     border-radius: 0.5rem;
-    background: #666;
+    background: #8d8b8b;
     color: black;
     cursor: pointer;
     font-size: 1.7rem;
@@ -108,11 +108,15 @@ body{
     border-radius: 0.5rem;
     height: 50rem;
     width: 35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    padding: 20px;
 }
 
 .pic {
     width: 200px; /* Adjust image size */
-    height: 200px;
+    height: 100px;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -130,6 +134,7 @@ body{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    text-align: center;
 }
 .home .home-slider1 .swiper-slide{
     overflow: hidden;
@@ -140,8 +145,23 @@ body{
     flex-direction: column;
     align-items: center;
 }
+.home .home-slider2 .swiper-slide{
+    overflow: hidden;
+    border-radius: 0.5rem;
+    height: 50rem;
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .home .home-slider1 .swiper-slide img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    text-align: center;
+}
+.home .home-slider2 .swiper-slide img{
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -191,4 +211,31 @@ img {
 }
 .service .box-container .box p{
     font-size: 1.5rem;
+}
+
+.price .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    gap: 1.5rem;
+}
+
+.price .box-container .box{
+    padding: 2rem 0;
+    background: #d3cbcb;
+}
+
+.price .box-container .box .title{
+    padding: 1.5rem 0;
+    font-size: 2rem;
+    text-align: center;
+}
+.price .box-container .box:hover{
+    transform: scale(1.03);
+}
+
+.price .box-container .box .amount{
+    color: black;
+    padding-top: 2rem;
+    font-size: 3rem;
+    text-align: center;
 }
