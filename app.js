@@ -49,3 +49,4 @@ var swiper = new Swiper(".home-slider2",{
         disableOnInteraction:false,
     },
 });
+

@@ -13,35 +13,125 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Basic Navbar Styling */
+        .navbar {
+            display: flex;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .navbar a, .dropdown .dropbtn {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            background-color: #555;
+            border-radius: 20px;
+        }
+
+        /* Dropdown Container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 35px;
+            overflow: hidden;
+        }
+
+        /* Dropdown Links */
+        .dropdown-content a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            border-radius: 10px;
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
         <a href="#" class="logo"> <span>Two Day Conclave</span> on Quantum computing and its application</a>
 
         <nav class="navbar">
-            <a href="#">home</a>
-            <a href="#">Patrons</a>
-            <a href="#">Adivisory Committee</a>
-            <a href="#">Conveners</a>
-            <a href="#">Co-Conveners</a>
-            <a href="#">Speakers</a>
-            <a href="#">About SRMIST</a>
-            <a href="#">About the Department</a>
-            <a href="#">About the Event </a>
-            <a href="#">Price</a>
+            <a href="#">Home</a>
+    
+            <div class="dropdown">
+                <a  class="dropbtn">Patrons</a>
+                <div class="dropdown-content">
+                    <a href="#PAARIVENDHAR"> DR. T.R. PAARIVENDHAR</a>
+                    <a href="#RAVI"> DR. RAVI P</a>
+                    <a href="#SATHYANARAYANAN">DR. SATHYANARAYANAN P</a>
+                    <a href="#SHIVAKUMAR">DR. R. SHIVAKUMAR</a>
+                </div>
+            </div>
+    
+            <div class="dropdown">
+                <a  class="dropbtn"> Committee</a>
+                <div class="dropdown-content">
+                    <a href="#Advisort-Comitee">Advisort-Comitee</a>
+                    <a href="#Convener">Convener</a>
+                    <a href="#Co-Convener">Co-Convener</a>
+                </div>
+            </div>
+    
+    
+            <div class="dropdown">
+                <a href="#Speaker" class="dropbtn">Speakers</a>
+                <div class="dropdown-content">
+                    <a href="#Speaker">PROF. ANIL PRABHAKAR</a>
+                    <a href="#Speaker">DR. S D SUDARSAN</a>
+                    <a href="#Speaker">PROF. AMLAN CHAKRABARTI</a>
+                    <a href="#Speaker">PROF. CHAITANYA SHARMA</a>
+                    <a href="#Speaker">PROF. JAYACHANDRA BINGI</a>
+                    <a href="#Speaker">SHRI JAGAN NATARAJAN</a>
+                    <a href="#Speaker">PROF. SOUGATA MALLICK</a>
+                    <a href="#Speaker">PROF. MUTHUGANESAN</a>
+                    <a href="#Speaker">PROF. SUBHAJIT SARKAR</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a  class="dropbtn">About us</a>
+                <div class="dropdown-content">
+                    <a href="#Aboutsrm">About SRMIST</a>
+                    <a href="#aboutDepartment">About the Department</a>
+                    <a href="#aboutEvent">About the Event</a>
+                </div>
+            </div>
+    
+            <a href="#price">Price</a>
         </nav>
-
         <div id="menu-bar" class="fass fa-bars"><menu></menu></div>
     </header>
     
     <section class="home" id="home">
         <div class="content">
-            <h3>Where your career  take off<br/>
-            Organized by:<br/><span> Department of Computing Technologies
+            <h3><span>Date:</span>  27-28TH FEB, 2025<br/>
+            <h3><span>Time: </span>10 A.M.<br/>
+            <h3><span>Venue: </span>IMAC LAB,14TH FLOOR, TECH PARK 1<br/>
+            <span>Organized by:</span><br/> Department of Computing Technologies
                 School of Computing 
                College of Engineering and Technology SRM
                 Institute of Science and Technology
-                Kattankulathur </span></h3>
+                Kattankulathur - 603203, Chengalpattu Dist.
+                Tamil Nadu </h3>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSeUwRNpwoSoRyNA8YEWqt5_iN_L-UivK-4PjpVRQej4BaYizQ/viewform" target="_blank" class="btn">Register</a>
         </div>
         <div class="swiper-container home-slider">
@@ -54,7 +144,7 @@
                     <img  src="Assets/srmlogos/srm.jpg" alt="">
                 </div>
                 <div class="swiper-slide">
-                    <img src="#" alt="">
+                    <img src="Assets/srmlogos/School of Computing.jpg" alt="">
                 </div>
                
             </div>
@@ -63,19 +153,19 @@
             <h1>Patrons</h1>
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img class="pic" src="Assets/patrons/chancellor.jpg" alt="">
+                    <img class="pic" id="PAARIVENDHAR" src="Assets/patrons/chancellor.jpg" alt="">
                     <p class="caption">DR. T.R. PAARIVENDHAR<br/>CHANCELLOR<br/>SRMIST</p>
                 </div>
                 <div class="swiper-slide">
-                    <img class="pic" src="Assets/patrons/ravi pro chancellor.jpg" alt="">
+                    <img class="pic" id="RAVI" src="Assets/patrons/ravi pro chancellor.jpg" alt="">
                     <p class="caption">DR. RAVI P<br/> PRO CHANCELLOR (ADMIN)<br/> SRMIST</p>
                 </div>
                 <div class="swiper-slide">
-                    <img class="pic" src="Assets/patrons/sathya pro cahncellor.jpg" alt="">
+                    <img class="pic" id="SATHYANARAYANAN" src="Assets/patrons/sathya pro cahncellor.jpg" alt="">
                     <p class="caption">DR. SATHYANARAYANAN P<br/> PRO CHANCELLOR (ACAD.)<br/> SRMIST</p>
                 </div>
                 <div class="swiper-slide">
-                    <img class="pic" src="Assets/patrons/chairam.jpg" alt="">
+                    <img class="pic" id="SHIVAKUMAR" src="Assets/patrons/chairam.jpg" alt="">
                     <p class="caption"> DR. R. SHIVAKUMAR<br/>CHAIRMAN <br/> SRMIST</p>
                 </div>
                
@@ -86,7 +176,7 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     
-                    <img class="pic" src="Assets/Advisory comitee/chairperson.jpg" alt="">
+                    <img class="pic" id="Advisort-Comitee" src="Assets/Advisory comitee/chairperson.jpg" alt="">
                     <p class="caption">PROF.REVATHI VENKATRAMAN<br/> CHAIRPERSON<br/> SCHOOL OF
                         COMPUTING<br/> SRMIST.</p>
                 </div>
@@ -112,10 +202,10 @@
             </div>
         </div>
         <div class="swiper-container home-slider">
-            <h1>Conveners</h1>
+            <h1 id="Convener">Conveners</h1>
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img class="pic" src="Assets/Conveners/Associate chariperson.jpg" alt="">
+                    <img class="pic"  src="Assets/Conveners/Associate chariperson.jpg" alt="">
                     <p class="caption">PROF. M.PUSHPALATHA<br/>ASSOCIATE CHAIRPERSON SCHOOL OF
                         COMPUTING<br/> SRMIST</p>
                 </div>
@@ -129,7 +219,7 @@
             </div>
         </div>
         <div class="swiper-container home-slider">
-            <h1>Co-Conveners</h1>
+            <h1 id="Co-Convener">Co-Conveners</h1>
             <div class="swiper-wrapper">
                 
                 <div class="swiper-slide">
@@ -144,10 +234,10 @@
             </div>
         </div>
         <div class="swiper-container home-slider2">
-            <h1>Speakers</h1>
+            <h1 id="Speaker">Speakers</h1>
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img class="pic" src="Assets/Speakers/amlan  univ.of calcutta.jpg" alt="">
+                    <img class="pic"Speaker  src="Assets/Speakers/amlan  univ.of calcutta.jpg" alt="">
                     <p class="caption">PROF. AMLAN CHAKRABARTI<br/> DIRECTOR UNIV. OF CALCUTTA</p>
                 </div>
                 <div class="swiper-slide">
@@ -188,7 +278,7 @@
         </div>
     </section>
 <section class="service" id="service">
-    <h2 class="heading">
+    <h2 class="heading" id="Aboutsrm">
         About<span> SRMIST</span>
 
         <div class="box-container">
@@ -252,7 +342,7 @@
             </div>
         </div>
     </h2>
-    <h2 class="heading">
+    <h2 class="heading" id="aboutDepartment">
         About the<span> Department</span>
 
         <div class="box-container">
@@ -305,7 +395,7 @@
             </div>
         </div>
     </h2>
-    <h2 class="heading">
+    <h2 class="heading" id="aboutEvent">
         About the<span> Event</span>
 
         <div class="box-container">
@@ -383,6 +473,19 @@ RESEARCH
     <h3 class="amount">Rs.750</h3>
     </div>
 </div>
+</section>
+
+<section class="footer">
+    <div class="box-container">
+    <div class="box">
+      <h3>CONTACT DETAILS</h3>
+      <a href="#"> <i class="fas fa-map-marker-alt"></i> DR. V. RAGHAVENDRA, ASSISTANT PROFESSOR,
+        CTECH DT,SRMIST.  </a>
+      <a href="#"> <i class="fas fa-map-marker-alt"></i> DR. M. GAYATHIRI, ASSOCIATE PROFESSOR,
+        CTECH DT,SRMIST  </a>
+      
+    </div>
+    </div>
 </section>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
