@@ -51,3 +51,7 @@ var swiper = new Swiper(".home-slider2",{
 });
 
 
+document.getElementById('menu-bar').addEventListener('click', function() {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('active'); // Toggle a class to show/hide the navbar
+});

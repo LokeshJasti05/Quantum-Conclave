@@ -40,7 +40,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 2%;
+    padding: 1.5rem 2%;
     
 }
 
@@ -174,8 +174,8 @@ body{
 .home .home-slider .swiper-slide{
     overflow: hidden;
     border-radius: 0.5rem;
-    height: 50rem;
-    width: 35rem;
+    height: 35rem;
+    width: 25rem;
     display: flex;
     flex-direction: column;
     align-items: center;    
@@ -210,8 +210,8 @@ body{
 .home .home-slider1 .swiper-slide{
     overflow: hidden;
     border-radius: 0.5rem;
-    height: 50rem;
-    width: 35rem;
+    height: 32rem;
+    width: 25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -219,8 +219,8 @@ body{
 .home .home-slider2 .swiper-slide{
     overflow: hidden;
     border-radius: 0.5rem;
-    height: 50rem;
-    width: 35rem;
+    height: 35rem;
+    width: 25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -381,4 +381,117 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensures the image covers the square without distortion */
+}
+
+.navbar.active {
+    display: flex; /* Show navbar */
+    flex-direction: column; /* Stack items vertically */
+}
+
+
+
+@media (max-width: 1200px) {
+    .header img {
+        width: 250px; /* Adjust logo size for medium screens */
+    }
+
+    .header .navbar a {
+        font-size: 1.5rem; /* Smaller font size for navbar links */
+    }
+
+    .content {
+        max-width: 90%; /* Allow more width on smaller screens */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .home .content h3 {
+        font-size: 2rem; /* Smaller font size for headings */
+    }
+
+    .home .home-slider .swiper-slide {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Auto height */
+    }
+
+    .service .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* Stack boxes on small screens */
+    }
+
+    .price .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* Stack price boxes */
+    }
+
+    .footer .box-container {
+        grid-template-columns: 1fr; /* Stack footer boxes */
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+    }
+
+    .navbar a {
+        margin: 0.5rem 0; /* Adjust margin for vertical stacking */
+    }
+
+    #menu-bar {
+        display: block; /* Show menu bar on smaller screens */
+    }
+}
+
+  @media (max-width: 992px) {
+    html {
+      font-size: 55%;
+    }
+    .header, .navbar {
+      flex-wrap: wrap;
+    }
+
+    .home .content{
+        padding-top: 370px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    html {
+      font-size: 50%;
+    }
+
+    
+
+    /* Show hamburger menu, hide default navbar */
+    #menu-bar {
+      display: block;
+    }
+    .navbar {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background-color: var(--dark-bg);
+    }
+    .navbar.active {
+      display: flex;
+    }
+    
+
+    
+    .dropdown .dropbtn {
+      padding: 15px;
+      font-size: 2rem;
+    }
+    .dropdown-content {
+      position: static;
+      background: #555;
+      left: 100%;
+      top: 0;
+      min-width: 160px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 35px;
+        overflow: hidden;
+    }
+    
+    
+    .home .content{
+        padding-top: 450px;
+    }
 }
