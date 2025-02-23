@@ -53,6 +53,7 @@ body{
     color: white;
     font-weight: bolder;
     font-size: 2.5rem;
+    padding-left: 100px;
 }
 
 .header .logo span{
@@ -229,12 +230,13 @@ body{
 .home .home-slider2 .swiper-slide{
     overflow: hidden;
     border-radius: 0.5rem;
-    height: 35rem;
+    height: 40rem;
     width: 25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 
 .home .home-slider1 .swiper-slide img{
     height: 100%;
@@ -264,6 +266,7 @@ h1{
     padding-bottom: 2rem;
     text-transform: uppercase;
     font-size: 3rem;
+    font-weight: normal;
 }
 .heading span{
     color:var(--theme-color);
@@ -503,7 +506,11 @@ img {
     .header{
         background-color: #333;
     }
+    .header .logo{
+        padding-left: 0;
+        padding-top: 5px;
+    }
     .home .content{
-        padding-top: 250px;
+        padding-top: 280px;
     }
 }
