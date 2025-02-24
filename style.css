@@ -205,6 +205,10 @@ body{
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+.email {
+    text-transform: lowercase;
+  }
+
 .caption {
     margin-top: 10px;
     font-size: 16px;
